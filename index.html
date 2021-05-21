@@ -5,9 +5,162 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public/css/styles.css" />
+    <script src="https://kit.fontawesome.com/cd71491467.js" crossorigin="anonymous"></script>
     <title>Ohmyfood!</title>
 </head>
 <body>
-    bijour
+
+    <div id="blocpage">
+
+            <!--HEADER HOME----------------------------------------------------------------------------------------->
+
+        <header>
+            <img src="./public/img/ohmyfood@2x.svg"  alt="logo Ohmyfood" class="logo"/>
+
+        </header>
+
+            <!--RECHERCHE------------------------------------------------------------------------------------------->
+
+        <section id="search">
+
+            <div id="search__field">
+                <div id="field__icon">
+                    <i class="fas fa-map-marker-alt"></i> 
+                </div>
+                <input type ="text" name="rechercheville" id="rechercheville" value="Paris, Belleville"/>
+            </div>
+            
+            <div id="resa">
+                <h1>Réservez le menu qui vous convient</h1>
+                <span>Découvrez des restaurants d'exception, sélectionnés par nos soins</span>
+                <button id="resa__btn">
+                    <span> Explorer nos restaurants</span>
+                </button>
+            </div>
+
+        </section>
+
+            <!--FONCTIONNEMENT-------------------------------------------------------------------------------------->
+
+        <section id="fonctionnement">
+            <h1>Fonctionnement</h1>
+            <div id="cont-fonctionement">
+                
+                <div class="cont-fonctionement__carte">
+                    <span>1</span>
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Choisissez un restaurant</span>
+                </div>
+
+                <div class="cont-fonctionement__carte">
+                    <span>2</span>
+                    <i class="fas fa-list"></i>
+                    <span>Composez votre menu</span>
+                </div>
+
+                <div class="cont-fonctionement__carte">
+                    <span>3</span>
+                    <i class="fas fa-store"></i>
+                    <span>Dégustez au restaurant</span>
+                </div>
+            </div>
+
+        </section>
+
+            <!--RESTAURANTS----------------------------------------------------------------------------------------->
+
+        <section id="restaurants">
+            <h1>Restaurants</h1>
+            <div id="cont-restaurant">
+
+                <a href="./palette-du-gout.html" class="cont-restaurant__carte">
+                    <div class="img-rest__1"></div>
+                    <div class="infocarte">
+                        <div class="infocarte__texte">
+                            <h2>La palette du goût</h2>
+                            <span>Ménilmontant</span>
+                        </div>
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="restaurant__nouveau">
+                        <span> Nouveau </span>
+                    </div>                          
+                </a>
+
+                <a href="./note-enchantee.html" class="cont-restaurant__carte">
+                    <div class="img-rest__2"></div>
+                    <div class="infocarte">
+                        <div class="infocarte__texte">
+                            <h2>La note enchantée</h2>
+                            <span>Charonne</span>
+                        </div>
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="restaurant__nouveau">
+                        <span> Nouveau </span>
+                    </div>                          
+                </a>
+
+                <a href="./francaise.html" class="cont-restaurant__carte">
+                    <div class="img-rest__3"></div>
+                    <div class="infocarte">
+                        <div class="infocarte__texte">
+                            <h2>A la française</h2>
+                            <span>Cité Rouge</span>
+                        </div>
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="restaurant__nouveau">
+                        <span> Nouveau </span>
+                    </div>                          
+                </a>
+
+                <a href="./delice-des-sens.html" class="cont-restaurant__carte">
+                    <div class="img-rest__4"></div>
+                    <div class="infocarte">
+                        <div class="infocarte__texte">
+                            <h2>Le délice des sens</h2>
+                            <span>Folie-Méricourt</span>
+                        </div>
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="restaurant__nouveau">
+                        <span> Nouveau </span>
+                    </div>                          
+                </a>
+
+            </div>
+
+        </section>
+
+            <!--FOOTER---------------------------------------------------------------------------------------------->
+
+        <footer>
+            <h2 id="footer_h2">ohmyfood</h2>
+            <div id="cont-footer">
+
+                <a href="#" class="footer__lien">
+                    <i class="fas fa-utensils"></i>
+                    <span>Proposer un restaurant</span>
+                </a>
+
+                <a href="#" class="footer__lien">
+                    <i class="fas fa-hands-helping"></i>
+                    <span>Devenir partenaire</span>
+                </a>
+
+                <a href="#" class="footer__lien">
+                    <span>Mentions légales</span>
+                </a>
+
+                <a href="#" class="footer__lien">
+                    <span>Contact</span>
+                </a>
+
+            </div>
+        </footer>
+
+    </div>
+    
 </body>
 </html>

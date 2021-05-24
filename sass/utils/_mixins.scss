@@ -1,0 +1,13 @@
+// RESPONSIVE
+
+@mixin resp-tablette{
+    @media screen and (min-width : map-get($responsive, breakpoint-1)) and (max-width : map-get($responsive, breakpoint-2)){
+        @content;
+    }
+}
+
+@mixin resp-desktop{
+    @media screen and (min-width : map-get($responsive, breakpoint-2)){
+        @content;
+    }
+}

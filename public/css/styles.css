@@ -1,3 +1,89 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
 
+body, h1, h2, h3, span, p, i {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #000000;
+}
+
+h1 {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 500;
+  font-size: 2.1rem;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px 0px 10px 0px;
+  justify-content: center;
+  box-shadow: 0px 2px 2px #a8a8a8;
+}
+
+footer {
+  background-color: #383838;
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+footer > h3 {
+  color: white;
+  font-family: "Shrikhand", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 20px;
+}
+footer > div {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 0px 25px 20px;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  footer > div {
+    align-items: center;
+  }
+}
+@media screen and (min-width: 991px) {
+  footer > div {
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  footer {
+    align-items: center;
+  }
+}
+@media screen and (min-width: 991px) {
+  footer {
+    align-items: center;
+  }
+}
+
+.footer__lien {
+  margin: 5px 0px 5px 0px;
+}
+.footer__lien > i, .footer__lien span {
+  color: white;
+}
 
 /*# sourceMappingURL=styles.css.map */

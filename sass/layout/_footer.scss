@@ -1,0 +1,39 @@
+footer {
+    background-color: $color-footer-background;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+        & > h3{
+        color:white;
+        font-family: 'Shrikhand', sans-serif;
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin: 20px;
+        }
+        & > div{
+        display: flex;
+        flex-direction: column;
+        margin: 0px 0px 25px 20px;
+            @include resp-tablette{
+                align-items: center;
+            }
+            @include resp-desktop{
+                align-items: center;
+            }
+        }
+
+    @include resp-tablette{
+        align-items: center;
+    }
+    @include resp-desktop{
+        align-items: center;
+    }
+}
+
+.footer__lien{
+    margin: 5px 0px 5px 0px;
+    & > i, span{
+        color:white;
+    }
+}
+

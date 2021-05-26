@@ -1,0 +1,214 @@
+//champ de recherche
+
+#search-field{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding: 20px 0px 20px 0px;
+    background-color: $color-search;
+    & > i{
+        color: $color-footer-background;
+        margin-right: 10px;
+        margin-left: 20px;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    & > input{
+        background-color: $color-search;
+        border: none;
+        font-family: "Roboto", sans-serif;
+        color: $color-footer-background;
+        font-size: 1rem;
+    }
+
+}
+
+//Cadre réservation (sans bouton)
+
+#resa{
+    background-color: $color-resa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & > h2{
+        font-size: 1.5rem;
+        margin: 30px 70px 10px 70px;
+        text-align: center;
+    }
+    & > span{
+        text-align: center;
+        font-size: 1.2rem;
+        margin: 10px 30px 20px 30px;
+    }
+}
+
+// Cadre fonctionnement
+
+#fonctionnement{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px 0 10px;
+    & > h2{
+        display: inline-block;
+        margin: 30px 0px 30px 0px;  
+        text-align: center;
+    }
+}
+
+#cont-fonctionnement{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 30px 0 30px;
+    width:90%;
+    
+}
+
+.cont-fonctionnement__carte{
+    display:flex;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 15px 0px 15px 0px;
+    padding: 15px;
+    border-radius: 25px;
+    background-color: $color-resa;
+    box-shadow: 0px 2px 2px $color-shadow;
+        & > p{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: -30px;
+        color: $color-white;
+        background-color: $color-primary;
+        font-weight: 400;
+        text-align: center;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        }
+        & > i{
+        margin: 0 15px 0 15px;
+        color: $color-footer-background;
+        }
+        & > span{
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        @include resp-tablette{
+            justify-content: center;
+        }
+        @include resp-desktop{
+            justify-content: center;
+        }
+}
+
+//cartes restaurants
+
+#restaurants{
+    margin: 50px 10px 30px 10px;
+    & > h2{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    @include resp-tablette{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    @include resp-desktop{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+}
+
+.cont-restaurant{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    @include resp-tablette{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    @include resp-desktop{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 90%;
+    }
+}
+
+.cont-restaurant__carte{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    height: 250px;
+    width:90%;
+    max-width: 500px;
+    border-radius: 25px;
+    box-shadow: 0px 2px 2px $color-shadow;
+    .restaurant__nouveau{
+        position: absolute;
+        left: 75%;
+        margin-top: 10px;
+        z-index: 1;
+        padding: 5px;
+        border-radius: 3px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        color:$color-green;
+        background-color:$color-tertiary;
+    }
+    @include resp-tablette{
+        width: 45%;
+        min-width: 30%;
+        margin : 10px;
+    }
+    @include resp-desktop{
+        width: 45%;
+        min-width: 30%;
+        margin : 10px;
+
+    }
+}
+
+.infocarte{
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 10px 0px 5px;
+    & h3{
+        margin-bottom: 5px;
+    }
+    & i{
+        font-size: 1.5rem;
+    }
+}
+
+.img-rest{
+    height: 70%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    background-size:cover;
+    background-position:center;
+    &__1 {
+        background-image:url(../img/palette.jpg);
+    }
+    &__2 {
+        background-image:url(../img/note.jpg);
+    }
+    &__3 {
+        background-image:url(../img/francaise.jpg);
+    }
+    &__4 {
+        background-image:url(../img/delices.jpg);
+    }
+    
+}

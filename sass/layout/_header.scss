@@ -7,4 +7,31 @@ header{
     box-shadow: 0px 2px 2px $color-shadow;
     position: relative;
     z-index: 1;
+    a{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 30px;
+        bottom: 20px;
+    }
+}
+
+.header__img{
+    height: 200px;
+    background-size:cover;
+    background-position:center;
+    &--palette{
+        background-image:url(../img/palette.jpg);
+    }
+    &--delices{
+        background-image:url(../img/delices.jpg);
+
+    }
+    &--note{
+        background-image:url(../img/notes.jpg);
+
+    }
+    &--francaise{
+        background-image:url(../img/francaise.jpg);
+    }
 }

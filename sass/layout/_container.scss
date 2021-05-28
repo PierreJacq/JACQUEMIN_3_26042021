@@ -1,0 +1,81 @@
+.menu{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 50px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    background-color: $color-resa;
+    margin: auto;
+    max-width: 800px;
+
+}
+
+.titre-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin : 25px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+
+}
+
+.sous-menu{
+    margin: 10px 20px 10px 20px;
+    & > p{
+        margin-bottom: 5px;
+    }
+    &__barre{
+        width: 50px;
+        height: 3px;
+        background-color: $color-tertiary;
+        margin-left:0px;
+    }
+}
+
+.plat{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    margin: 15px 0 15px 0;
+    border-radius: 20px;
+    background-color: $color-white;
+    box-shadow: 2px 2px 2px $color-shadow;
+
+}
+
+.plat__description{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 15px 0 15px 15px;
+    & > h3{
+        margin-bottom: 5px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    & > p{
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+}
+
+.plat__prix-anim{
+    display: flex;
+    align-items: flex-end;
+    & > p{
+        padding: 15px 15px 15px 0;
+    }
+    & > div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $color-tertiary;
+        height: 100%;
+        width: 70px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+}

@@ -9,7 +9,7 @@ body, h1, h2, h3, span, p, i{
 h1{
     font-family: "Shrikhand", sans-serif;
     font-weight: 500;
-    font-size: 2.1rem;
+    font-size: 2.0rem;
 }
 
 h2{
@@ -24,4 +24,18 @@ h3{
 
 a{
     text-decoration: none;
+}
+
+// FORMAT FONTAWESOME
+
+.far.fa-heart{
+    font-size: 1.5rem;
+}
+
+.fas.fa-check{
+    font-size: 1.2rem;
+    padding: 6px;
+    border-radius: 50%;
+    color: $color-tertiary;
+    background-color: $color-white;
 }

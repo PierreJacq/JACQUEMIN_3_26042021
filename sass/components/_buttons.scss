@@ -1,4 +1,4 @@
-#resa__btn{
+.bouton{
     width: fit-content;
     border: none;
     background-image:linear-gradient($color-secondary, $color-primary);
@@ -12,5 +12,8 @@
     & > span{
         color: $color-white;
         font-weight: 500;
+    }
+    &--menu{
+        padding: 15px 50px 15px 50px;
     }
 }

@@ -1,3 +1,7 @@
+#blocpage{
+    background-color: $color-resa;
+}
+
 .menu{
     display: flex;
     flex-direction: column;
@@ -78,4 +82,10 @@
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
     }
+}
+
+.cont-bouton{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }

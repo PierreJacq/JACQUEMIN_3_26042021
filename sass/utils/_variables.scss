@@ -20,9 +20,27 @@ $color-white: #ffffff;
 
 $color-green: #088062;
 
+
 // RESPONSIVE
 
 $responsive:(
     breakpoint-1: 768px,
     breakpoint-2: 991px,
 );
+
+// ANIMATIONS --PLAT
+
+$anim--plat--duration: 1000ms;
+$anim--plat--delay: $anim--plat--duration / 5 ;
+
+@keyframes plats{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.30;
+    }
+    100%{
+        opacity: 1;
+    }
+}

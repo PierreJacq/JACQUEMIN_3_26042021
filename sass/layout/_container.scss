@@ -1,5 +1,5 @@
 #blocpage{
-    background-color: $color-resa;
+    background-color: $color-white;
 }
 
 .menu{
@@ -9,7 +9,7 @@
     bottom: 50px;
     border-top-right-radius: 25px;
     border-top-left-radius: 25px;
-    background-color: $color-resa;
+    background: $color-resa;
     margin: auto;
     max-width: 800px;
 
@@ -46,6 +46,14 @@
     border-radius: 20px;
     background-color: $color-white;
     box-shadow: 2px 2px 2px $color-shadow;
+
+    animation: plats $anim--plat--duration backwards 1 linear;
+
+    @for $i from 1 through 10{
+        &--#{$i}{
+            animation-delay: $anim--plat--delay * $i;
+        }
+    }
 
 }
 

@@ -30,6 +30,17 @@ a{
 
 .far.fa-heart{
     font-size: 1.5rem;
+    &::before{
+        content: "\f004";
+    }
+    &:hover{
+        background-image: linear-gradient($color-secondary, $color-primary);
+        background-clip: text;
+        color: transparent;
+        -webkit-background-clip: text;
+        transition: all 400ms linear;
+        font-weight: 900;
+    }
 }
 
 .fas.fa-check{

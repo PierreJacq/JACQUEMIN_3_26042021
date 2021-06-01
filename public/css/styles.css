@@ -1,3 +1,15 @@
+@charset "UTF-8";
+@keyframes plats {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -34,6 +46,17 @@ a {
 .far.fa-heart {
   font-size: 1.5rem;
 }
+.far.fa-heart::before {
+  content: "";
+}
+.far.fa-heart:hover {
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  transition: all 400ms linear;
+  font-weight: 900;
+}
 
 .fas.fa-check {
   font-size: 1.2rem;
@@ -52,9 +75,6 @@ a {
   margin: 10px 0 40px 0;
   box-shadow: 0px 2px 2px #979797;
 }
-.bouton:hover {
-  cursor: pointer;
-}
 .bouton > span {
   color: #ffffff;
   font-weight: 500;
@@ -62,9 +82,15 @@ a {
 .bouton--menu {
   padding: 15px 50px 15px 50px;
 }
+.bouton:hover {
+  background-image: linear-gradient(#fface8, #ae80e5);
+  cursor: pointer;
+  box-shadow: 5px 5px 5px #646464;
+}
 
 header {
   display: flex;
+  background-color: #ffffff;
   width: 100%;
   margin-bottom: 0px;
   padding: 10px 0px 10px 0px;
@@ -145,7 +171,7 @@ footer > div {
 }
 
 #blocpage {
-  background-color: #e9e9e9;
+  background-color: #ffffff;
 }
 
 .menu {
@@ -155,7 +181,7 @@ footer > div {
   bottom: 50px;
   border-top-right-radius: 25px;
   border-top-left-radius: 25px;
-  background-color: #e9e9e9;
+  background: #e9e9e9;
   margin: auto;
   max-width: 800px;
 }
@@ -190,6 +216,37 @@ footer > div {
   border-radius: 20px;
   background-color: #ffffff;
   box-shadow: 2px 2px 2px #979797;
+  animation: plats 1000ms backwards 1 linear;
+}
+.plat--1 {
+  animation-delay: 200ms;
+}
+.plat--2 {
+  animation-delay: 400ms;
+}
+.plat--3 {
+  animation-delay: 600ms;
+}
+.plat--4 {
+  animation-delay: 800ms;
+}
+.plat--5 {
+  animation-delay: 1000ms;
+}
+.plat--6 {
+  animation-delay: 1200ms;
+}
+.plat--7 {
+  animation-delay: 1400ms;
+}
+.plat--8 {
+  animation-delay: 1600ms;
+}
+.plat--9 {
+  animation-delay: 1800ms;
+}
+.plat--10 {
+  animation-delay: 2000ms;
 }
 
 .plat__description {
@@ -403,6 +460,9 @@ footer > div {
   font-weight: 500;
   color: #088062;
   background-color: #99E2D0;
+}
+.cont-restaurant__carte:hover {
+  box-shadow: 3px 3px 3px #979797;
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .cont-restaurant__carte {

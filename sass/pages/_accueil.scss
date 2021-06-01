@@ -167,6 +167,10 @@
         color:$color-green;
         background-color:$color-tertiary;
     }
+    &:hover{
+        box-shadow: 3px 3px 3px $color-shadow;
+
+    }
     @include resp-tablette{
         width: 45%;
         min-width: 30%;

@@ -11,3 +11,11 @@
         @content;
     }
 }
+
+@mixin hover-bouton($color-low :$color-secondary, $color-high: $color-primary, $color-dark-shadow: $color-shadow){
+    $grad-bas: lighten($color-low, 10%);
+    $grad-haut : lighten($color-high, 10%);
+    background-image: linear-gradient($grad-bas, $grad-haut);
+    cursor: pointer;
+    box-shadow: 5px 5px 5px darken($color-shadow,20%)
+}

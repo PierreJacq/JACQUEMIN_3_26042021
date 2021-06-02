@@ -12,10 +12,106 @@
     }
 }
 
+// ANIMATIONS
+
+//Anim couleur + ombre boutons
+
 @mixin hover-bouton($color-low :$color-secondary, $color-high: $color-primary, $color-dark-shadow: $color-shadow){
     $grad-bas: lighten($color-low, 10%);
     $grad-haut : lighten($color-high, 10%);
     background-image: linear-gradient($grad-bas, $grad-haut);
     cursor: pointer;
     box-shadow: 5px 5px 5px darken($color-shadow,20%)
+}
+
+//Anim apparition plats
+
+@mixin anim__plats{
+    animation: plats $anim--plat--duration backwards 1 linear;
+    @for $i from 1 through 10{
+        &--#{$i}{
+            animation-delay: $anim--plat--delay * $i;
+        }
+    }
+}
+
+@keyframes plats{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.30;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+// Anim remplissage coeur
+
+@mixin anim__coeurs{
+&::before{
+    content: "\f004";
+}
+&:hover{
+    background-image: linear-gradient($color-secondary, $color-primary);
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    transition: all $anim--coeur linear;
+    font-weight: 900;
+    }
+}
+
+//Anim checkbox
+
+@mixin anim__checkbox{
+    &__checkbox{
+        transform-origin: right;
+        transform: scaleX(0);
+        & > i{
+            visibility: hidden;
+            position: absolute;
+            animation: checkbox-reverse $anim--checkbox 1 ease-in-out ;
+
+        }
+    }
+    &:hover{
+        & .plat__checkbox{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $color-tertiary;
+        height: 100%;
+        width: 80px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        transform: scaleX(1);
+        transition: transform $anim--checkbox;
+        & > i{
+            visibility: visible;
+            position: relative;
+            animation: checkbox $anim--checkbox 1 ease-in-out ;
+        }
+        }
+        
+    }
+}
+
+@keyframes checkbox{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes checkbox-reverse{
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(00deg);
+    }
 }

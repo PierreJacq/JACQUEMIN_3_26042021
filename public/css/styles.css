@@ -10,6 +10,22 @@
     opacity: 1;
   }
 }
+@keyframes checkbox {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes checkbox-reverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -218,6 +234,13 @@ footer > div {
   box-shadow: 2px 2px 2px #979797;
   animation: plats 1000ms backwards 1 linear;
 }
+.plat__prix-anim {
+  display: flex;
+  align-items: flex-end;
+}
+.plat__prix-anim > p {
+  padding: 15px 15px 15px 0;
+}
 .plat--1 {
   animation-delay: 200ms;
 }
@@ -248,6 +271,32 @@ footer > div {
 .plat--10 {
   animation-delay: 2000ms;
 }
+.plat__checkbox {
+  transform-origin: right;
+  transform: scaleX(0);
+}
+.plat__checkbox > i {
+  visibility: hidden;
+  position: absolute;
+  animation: checkbox-reverse 400ms 1 ease-in-out;
+}
+.plat:hover .plat__checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #99E2D0;
+  height: 100%;
+  width: 80px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transform: scaleX(1);
+  transition: transform 400ms;
+}
+.plat:hover .plat__checkbox > i {
+  visibility: visible;
+  position: relative;
+  animation: checkbox 400ms 1 ease-in-out;
+}
 
 .plat__description {
   display: flex;
@@ -264,24 +313,6 @@ footer > div {
 .plat__description > p {
   text-overflow: ellipsis;
   overflow: hidden;
-}
-
-.plat__prix-anim {
-  display: flex;
-  align-items: flex-end;
-}
-.plat__prix-anim > p {
-  padding: 15px 15px 15px 0;
-}
-.plat__prix-anim > div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #99E2D0;
-  height: 100%;
-  width: 70px;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
 }
 
 .cont-bouton {

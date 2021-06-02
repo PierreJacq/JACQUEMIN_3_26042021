@@ -46,15 +46,16 @@
     border-radius: 20px;
     background-color: $color-white;
     box-shadow: 2px 2px 2px $color-shadow;
-
-    animation: plats $anim--plat--duration backwards 1 linear;
-
-    @for $i from 1 through 10{
-        &--#{$i}{
-            animation-delay: $anim--plat--delay * $i;
+    &__prix-anim{
+        display: flex;
+        align-items: flex-end;
+        & > p{
+            padding: 15px 15px 15px 0;
         }
     }
-
+    @include anim__plats;
+    @include anim__checkbox;
+    
 }
 
 .plat__description{
@@ -74,23 +75,6 @@
     }
 }
 
-.plat__prix-anim{
-    display: flex;
-    align-items: flex-end;
-    & > p{
-        padding: 15px 15px 15px 0;
-    }
-    & > div{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: $color-tertiary;
-        height: 100%;
-        width: 70px;
-        border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px;
-    }
-}
 
 .cont-bouton{
     width: 100%;

@@ -69,10 +69,10 @@
     &__checkbox{
         transform-origin: right;
         transform: scaleX(0);
+        animation: checkbox-reverse 1s ;
         & > i{
             visibility: hidden;
             position: absolute;
-            animation: checkbox-reverse $anim--checkbox 1 ease-in-out ;
 
         }
     }

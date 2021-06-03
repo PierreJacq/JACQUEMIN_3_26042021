@@ -76,6 +76,9 @@
     border-radius: 25px;
     background-color: $color-resa;
     box-shadow: 2px 2px 2px $color-shadow;
+        &:hover{
+            background-color: lighten($color-secondary,20%);
+        }
         & > p{
         display: flex;
         align-items: center;

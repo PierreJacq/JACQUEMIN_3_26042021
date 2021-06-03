@@ -31,6 +31,10 @@
   margin: 0;
 }
 
+body {
+  height: 100%;
+}
+
 body, h1, h2, h3, span, p, i {
   font-family: "Roboto", sans-serif;
   font-weight: 100;
@@ -104,6 +108,79 @@ a {
   box-shadow: 5px 5px 5px #646464;
 }
 
+#spinner {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  animation: spinner__apparition 3s forwards ease-in-out;
+}
+
+#conteneur-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 200px;
+  animation: spinner__rotation 500ms infinite linear;
+}
+
+#titre__spinner {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.spinner__barre {
+  width: 300px;
+  height: 30px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+}
+.spinner__barre--2 {
+  transform: rotate(60deg);
+}
+.spinner__barre--3 {
+  transform: rotate(-60deg);
+}
+
+.spinner__ball {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px #979797;
+}
+.spinner__ball--1 {
+  background-image: linear-gradient(#9356DC, #FF79DA);
+}
+.spinner__ball--2 {
+  background-image: linear-gradient(#FF79DA, #9356DC);
+}
+
+@keyframes spinner__apparition {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -5;
+  }
+}
+@keyframes spinner__rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 header {
   display: flex;
   background-color: #ffffff;

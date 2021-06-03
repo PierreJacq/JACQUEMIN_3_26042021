@@ -1,0 +1,78 @@
+#spinner{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background-color: $color-white;
+    animation: spinner__apparition 3s forwards ease-in-out;
+}
+
+#conteneur-spinner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    animation: spinner__rotation 500ms infinite linear;
+}
+#titre__spinner{
+    font-family: "Shrikhand", sans-serif;
+    font-weight: 500;
+    font-size: 2.0rem;
+}
+
+.spinner__barre{
+    width:300px;
+    height:30px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    background-color:transparent;
+    &--2{
+        transform :rotate(60deg);
+    }
+    &--3{
+        transform :rotate(-60deg);
+
+    }
+}
+
+.spinner__ball{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 2px $color-shadow;
+    &--1{
+        background-image: linear-gradient($color-primary, $color-secondary);
+    }
+    &--2{
+        background-image: linear-gradient($color-secondary, $color-primary);
+    }
+}
+
+//Anim apparition et disparition spinner
+
+@keyframes spinner__apparition{
+    0%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+        z-index: -5;
+    }
+}
+
+// Animation rotation des barres
+
+@keyframes spinner__rotation{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

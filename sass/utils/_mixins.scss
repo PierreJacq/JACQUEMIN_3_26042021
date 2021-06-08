@@ -68,50 +68,71 @@
 @mixin anim__checkbox{
     &__checkbox{
         transform-origin: right;
-        transform: scaleX(0);
-        animation: checkbox-reverse 1s ;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $color-tertiary;
+        border-radius: 0 20px 20px 0;
+        height: 100%;
+        width: 0px;
+        animation : checkbox-shrink $anim--checkbox/2 forwards linear;
+
         & > i{
-            visibility: hidden;
-            position: absolute;
+            transform: rotate(0deg);
+            opacity : 0;
+            animation: checkbox-rotate-reverse $anim--checkbox/2 forwards linear;
 
         }
     }
     &:hover{
         & .plat__checkbox{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: $color-tertiary;
-        height: 100%;
-        width: 80px;
-        border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px;
-        transform: scaleX(1);
-        transition: transform $anim--checkbox;
+        animation : checkbox-grow $anim--checkbox forwards linear;
         & > i{
-            visibility: visible;
-            position: relative;
-            animation: checkbox $anim--checkbox 1 ease-in-out ;
+            animation: checkbox-rotate $anim--checkbox forwards linear;
         }
         }
         
     }
 }
 
-@keyframes checkbox{
+@keyframes checkbox-rotate{
     0%{
         transform: rotate(0deg);
+        opacity : 0;
     }
     100%{
         transform: rotate(360deg);
+        opacity: 1;
     }
 }
 
-@keyframes checkbox-reverse{
+@keyframes checkbox-rotate-reverse{
     0%{
         transform: rotate(360deg);
+        opacity : 1;
+    }
+    50%{
+        opacity: 0;
     }
     100%{
-        transform: rotate(00deg);
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes checkbox-grow{
+    0%{
+        width: 0px;
+    }
+    100%{
+        width: 80px;
+    }
+}
+
+@keyframes checkbox-shrink{
+    0%{
+        width: 80px;
+    }
+    100%{
+        width: 0px;
     }
 }

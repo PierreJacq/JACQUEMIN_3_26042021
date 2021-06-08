@@ -47,21 +47,6 @@
     }
 }
 
-// Anim remplissage coeur
-
-@mixin anim__coeurs{
-&::before{
-    content: "\f004";
-}
-&:hover{
-    background-image: linear-gradient($color-secondary, $color-primary);
-    background-clip: text;
-    color: transparent;
-    -webkit-background-clip: text;
-    transition: all $anim--coeur linear;
-    font-weight: 900;
-    }
-}
 
 //Anim checkbox
 

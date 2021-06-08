@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @keyframes plats {
   0% {
     opacity: 0;
@@ -91,17 +90,22 @@ a {
 
 .far.fa-heart {
   font-size: 1.5rem;
-}
-.far.fa-heart::before {
-  content: "";
+  position: absolute;
+  background-color: #ffffff;
+  opacity: 1;
+  transition: 0.5s;
 }
 .far.fa-heart:hover {
-  background-image: linear-gradient(#FF79DA, #9356DC);
-  background-clip: text;
-  color: transparent;
-  -webkit-background-clip: text;
-  transition: all 400ms linear;
-  font-weight: 900;
+  opacity: 0;
+}
+
+.far.fa-heart.gris {
+  background-color: #e9e9e9;
+}
+
+.fas.fa-heart {
+  color: #FF79DA;
+  font-size: 1.5rem;
 }
 
 .fas.fa-check {
@@ -621,6 +625,12 @@ footer > div {
 }
 .infocarte h3 {
   margin-bottom: 5px;
+}
+
+.cadrecoeur {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .img-rest {

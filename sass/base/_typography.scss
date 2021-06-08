@@ -30,7 +30,23 @@ a{
 
 .far.fa-heart{
     font-size: 1.5rem;
-    @include anim__coeurs;
+    position: absolute;
+    background-color: $color-white;
+    opacity: 1;
+    transition: 0.5s;
+    &:hover{
+        opacity:0;
+    }
+}
+
+.far.fa-heart.gris{
+    background-color: $color-resa;
+
+}
+
+.fas.fa-heart{
+    color: $color-secondary;
+    font-size: 1.5rem;
 }
 
 .fas.fa-check{
@@ -40,3 +56,4 @@ a{
     color: $color-tertiary;
     background-color: $color-white;
 }
+

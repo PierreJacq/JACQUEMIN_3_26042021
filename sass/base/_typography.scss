@@ -45,7 +45,10 @@ a{
 }
 
 .fas.fa-heart{
-    color: $color-secondary;
+    background: linear-gradient($color-primary, $color-secondary);
+    //background-clip:text;
+    -webkit-background-clip: text;
+    color: transparent;
     font-size: 1.5rem;
 }
 

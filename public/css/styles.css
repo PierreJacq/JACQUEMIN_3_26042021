@@ -104,7 +104,9 @@ a {
 }
 
 .fas.fa-heart {
-  color: #FF79DA;
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  color: transparent;
   font-size: 1.5rem;
 }
 
